@@ -1,0 +1,72 @@
+{
+    "footer": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Footer Section",
+        "content": {
+            "text": "text"
+        }
+    },
+    "policy_pages": {
+        "builder": true,
+        "no_selection":true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    }, 
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "social_icon": "icon",
+            "url": "text",
+            "modal": true
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Contact Us",
+        "content": {
+            "heading": "text",
+            "sub_heading": "text"
+        },
+        "element":{
+            "contact":"text",
+            "icon":"icon",
+            "modal":true
+        }
+    },
+    "login": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Login Section",
+        "content": {
+            "text": "text"
+        }
+    },
+     "register": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Register Section",
+        "content": {
+            "text": "text"
+        }
+    },
+    "auth": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Auth Page Image",
+        "content": {
+            "images": {
+                "image":{
+                    "size":"1920x1280"
+                }
+            }
+        }
+    }
+}

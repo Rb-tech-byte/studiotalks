@@ -1,0 +1,24 @@
+# Laravel routing for subfolder deployment (studiotalks)
+# Ensure Apache's mod_rewrite is enabled.
+
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+
+    # App is in /studiotalks under DocumentRoot
+    RewriteBase /studiotalks/
+
+    # Serve existing files/directories directly (e.g., /assets/* at project root)
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Forward everything else to the project's front controller at the root
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+# Preserve Authorization header for APIs
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization ".+" HTTP_AUTHORIZATION=$0
+</IfModule>
